@@ -56,38 +56,42 @@ function modal_close(){
 
 function enlarge1() {
   document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-h1").innerHTML = "Javascript Hello 1";
+  document.getElementById("modal-h1").innerHTML = "Get to know me";
   document.getElementById("modal-p").innerHTML =
     "Former professional fighter currently studying to become a Fontend Developer at Hyper Island";
 }
 
 function enlarge2() {
   document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-h1").innerHTML = "Javascript Hello 2";
-  document.getElementById("modal-p").innerHTML = "These are all of my current projects";
+  document.getElementById("modal-h1").innerHTML = "My previous work";
+  document.getElementById("modal-p").innerHTML = "Some of my current projects";
 }
 
 function enlarge3() {
   document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-h1").innerHTML = "Javascript Hello 3";
+  document.getElementById("modal-h1").innerHTML = "Get in touch with me";
   document.getElementById("modal-p").innerHTML = "Phone: +46 73-999-XX XX <br> Mail: jonathan.zeray@hotmail.com";
 }
 
 function enlarge4() {
   document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-h1").innerHTML = "Javascript Hello 4";
+  document.getElementById("modal-h1").innerHTML = "My Github account";
   document.getElementById("modal-p").innerHTML = "https://github.com/JonathanZeray";
 
 }
 
 function enlarge5() {
   document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-h1").innerHTML = "Javascript Hello 5";
+  document.getElementById("modal-h1").innerHTML = "My LinkedIn profile";
+  document.getElementById("modal-p").innerHTML = "linkedin/JonathanZeray";
+
 }
 
 function enlarge6() {
   document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-h1").innerHTML = "Javascript Hello 6";
+  document.getElementById("modal-h1").innerHTML = "CV & Personal letter";
+  document.getElementById("modal-p").innerHTML = "Blablabla..";
+
 }
 
 
