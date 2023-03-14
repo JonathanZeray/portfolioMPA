@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <section class="start-section">
+      <h1 data-value="JONATHAN ZERAY" class="name">JONATHAN ZERAY</h1>
+      <img src="jzCrop.png" alt="picture of myself" class="selfie" />
+      <h2 class="role-title">Frontend Developer student</h2>
+    </section>
+    <section class="second-section">
+      <div id="cards">
+        <div class="modal" id="modal">
+          <h1 id="modal-h1"></h1>
+          <p id="modal-p"></p>
+          <button id="modal-btn" class="modal-btn" onclick="modal_close()"> Close </button>
+        </div>
+        <div class="card" id="box1" onclick="enlarge1()">
+          <div class="card-border"></div>
+          <div class="card-content">
+            <div class="card-info-wrapper">
+              <div class="card-info-title">
+                <h3>ABOUT ME</h3>
+                <h4>Who am I?</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card box2" onclick="enlarge2()">
+          <div class="card-border"></div>
+          <div class="card-content">
+            <div class="card-info-wrapper">
+              <div class="card-info-title">
+                <h3>PROJECTS</h3>
+                <h4>What have I been up to?</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card box3" onclick="enlarge3()">
+          <div class="card-border"></div>
+          <div class="card-content">
+            <div class="card-info-wrapper">
+              <div class="card-info-title">
+                <h3>CONTACT ME</h3>
+                <h4>Let's talk!</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card box4" onclick="enlarge4()">
+          <div class="card-border"></div>
+          <div class="card-content">
+            <div class="card-info-wrapper">
+              <div class="card-info-title">
+                <h3>GITHUB</h3>
+                <h4>The code behind the projects</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card box5" onclick="enlarge5()">
+          <div class="card-border"></div>
+          <div class="card-content">
+            <div class="card-info-wrapper">
+              <div class="card-info-title">
+                <h3>LINKEDIN</h3>
+                <h4>Let's connect</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card box6" onclick="enlarge6()">
+          <div class="card-border"></div>
+          <div class="card-content">
+            <div class="card-info-wrapper">
+              <div class="card-info-title">
+                <h3>CV</h3>
+                <h4>Previous experience</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

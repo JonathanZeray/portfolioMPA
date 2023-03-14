@@ -1,0 +1,209 @@
+:root {
+  --card-color: rgb(30, 30, 30);
+}
+
+body {
+  /* background-color: black; */
+  background: #CAC531;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F3F9A7, #CAC531);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin: 0px;
+  padding: 0px;
+}
+
+.start-section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0rem;
+}
+
+.name {
+  font-family: "Space Mono", monospace;
+  font-size: clamp(3rem, 8vw, 9rem);
+  color: black;
+  font-weight: 900;
+  /* padding: 0rem clamp(1rem, 2vw, 3rem); */
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  padding: 0 15px;
+  margin: 10px;
+  margin-bottom: 2px;
+  border: 1.4px solid black;
+  box-shadow: 10px 10px 2px 2px rgba(0, 0, 255, .2);}
+
+.name:hover {
+  /* background-color: whitesmoke; */
+  color: black;
+}
+
+.role-title {
+  color: black;
+  font-family: "Space Mono", monospace;
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.role-title:hover {
+  text-decoration: underline;
+}
+
+.selfie {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+
+
+/* ---------- ------------- ------------ SECOND SECTION ----------- -------------------- ------------ */
+
+.second-section {
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 950px;
+  gap: 8px;
+  width: calc(100% - 20px);
+}
+
+#cards:hover > .card > .card-border {
+  opacity: 1;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 260px;
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before,
+.card > .card-border {
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 500ms;
+  content: "";
+  z-index: 2;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.1),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.card > .card-border {
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 2),
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.card > .card-content {
+  /* background-image: url("https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"); */
+  background-color: var(--card-color);
+  border-radius: inherit;
+  margin: 1px;
+  position: relative;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  z-index: 2;
+}
+
+/* --- --- ---- ----  */
+h2, h3, h4, span {
+  color: rgb(240, 240, 240);
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+}
+
+
+.card-info-wrapper {
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  margin-left: 20px;
+  /* padding: 0px 20px; */
+}
+
+
+
+.card-info-title > h3 {
+  font-size: 2rem;
+  line-height: 1px;
+  
+}
+
+.card-info-title > h4 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.90em;
+  margin-top: 8px;
+}
+
+
+/* --- --- MODAL --- --- */
+
+.modal {
+  background-color: whitesmoke;
+  font-family: "Space Mono", monospace;
+  font-size: 2rem;
+  border-radius: 10px;
+  width: 700px;
+  height: 350px;
+  opacity: 0.98;
+  z-index: 9999;
+  position: absolute;
+  right: 300px;
+  top: 730px;
+  display: none;
+}
+
+.modal > h1, p {
+  margin: 5px;
+  padding: 5px;
+}
+
+.modal > p {
+font-size: 20px;
+}
+
+.modal-btn {
+  position: absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  margin: 0 120px 5px 120px;
+  text-align:center;
+  border-radius: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+}
