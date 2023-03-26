@@ -59,7 +59,7 @@ function enlarge1() {
   document.getElementById("modal-link1").style.display = "none";
   document.getElementById("modal-h1").innerHTML = "Get to know me";
   document.getElementById("modal-p").innerHTML =
-    "A former professional fighter who's studying to become a Fontend Developer at Hyper Island. <br> \
+    "A former professional Muay Thai fighter who's studying to become a Frontend Developer at Hyper Island. <br> \
      I've got a passion for creating, solving problems and working with people. <br><br> \
      I'm currently looking for internship opportunities between 25/9-2023 to 29/3-2024.";
 }
