@@ -4,9 +4,17 @@
 
 body {
   /* background-color: black; */
-  background: #CAC531;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #F3F9A7, #CAC531);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #cac531; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f3f9a7,
+    #cac531
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f3f9a7,
+    #cac531
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   margin: 0px;
   padding: 0px;
@@ -30,7 +38,8 @@ background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, F
   margin: 10px;
   margin-bottom: 2px;
   border: 1.4px solid black;
-  box-shadow: 10px 10px 2px 2px rgba(0, 0, 255, .2);}
+  box-shadow: 10px 10px 2px 2px rgba(0, 0, 255, 0.2);
+}
 
 .name:hover {
   /* background-color: whitesmoke; */
@@ -45,9 +54,9 @@ background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, F
   margin: 0;
 }
 
-.role-title:hover {
+/* .role-title:hover {
   text-decoration: underline;
-}
+} */
 
 .selfie {
   width: 200px;
@@ -55,7 +64,11 @@ background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, F
   border-radius: 20px;
 }
 
-
+.selfie:hover {
+  transform: scale(1.02);
+  transition: 0.8s;
+  box-shadow: 10px 10px 1px 1px rgba(0, 0, 255, 0.2);
+}
 
 /* ---------- ------------- ------------ SECOND SECTION ----------- -------------------- ------------ */
 
@@ -137,12 +150,14 @@ background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, F
 }
 
 /* --- --- ---- ----  */
-h2, h3, h4, span {
+h2,
+h3,
+h4,
+span {
   color: rgb(240, 240, 240);
   font-family: "Space Mono", monospace;
   font-weight: 400;
 }
-
 
 .card-info-wrapper {
   width: 100%;
@@ -155,20 +170,16 @@ h2, h3, h4, span {
   /* padding: 0px 20px; */
 }
 
-
-
 .card-info-title > h3 {
   font-size: 2rem;
   line-height: 1px;
-  
 }
 
 .card-info-title > h4 {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.90em;
+  font-size: 0.9em;
   margin-top: 8px;
 }
-
 
 /* --- --- MODAL --- --- */
 
@@ -182,29 +193,60 @@ h2, h3, h4, span {
   opacity: 0.98;
   z-index: 9999;
   position: absolute;
-  right: 300px;
-  top: 730px;
+  display: flex;
+  justify-content: center;
   display: none;
 }
 
-.modal > h1, p {
-  margin: 5px;
-  padding: 5px;
+.modal > a {
+  font-size: 1.5rem;
+  color: black;
+  display: none;
+}
+
+/* position: absolute;
+  right: 300px;
+  top: 730px;
+*/
+
+.modal > h1,
+p {
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
 }
 
 .modal > p {
-font-size: 20px;
+  font-size: 20px;
 }
 
 .modal-btn {
   position: absolute;
-  bottom:0;
-  right:0;
-  left:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   margin: 0 120px 5px 120px;
-  text-align:center;
+  text-align: center;
   border-radius: 10px;
   font-family: "Space Mono", monospace;
   font-size: 20px;
   cursor: pointer;
+}
+
+#modal-link1,
+#modal-link2,
+#modal-link3 {
+  display: none;
+}
+
+#modal-link3 > ul {
+  font-size: 24px;
+  margin-left: 16px;
+  list-style-type: none;
+  margin-top: 10px;
+  padding-top: 0;
+}
+
+#modal-link3 > ul > li > a:visited {
+  color: black;
 }

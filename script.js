@@ -43,58 +43,65 @@ window.onload = function () {
   };
 };
 
-
-///////////////// MODAL LOGIC ///////////////////
+/////////// MODAL LOGIC (This following code process made me miss React and it's reusable components..) /////////
 
 let modal_btn = document.getElementById("modal-btn");
 
-function modal_close(){
+function modal_close() {
   document.getElementById("modal").style.display = "none";
+  document.getElementById("modal-link1").style.display = "none";
+  document.getElementById("modal-link2").style.display = "none";
+  document.getElementById("modal-link3").style.display = "none";
 }
-
-
 
 function enlarge1() {
   document.getElementById("modal").style.display = "block";
+  document.getElementById("modal-link1").style.display = "none";
   document.getElementById("modal-h1").innerHTML = "Get to know me";
   document.getElementById("modal-p").innerHTML =
-    "Former professional fighter currently studying to become a Fontend Developer at Hyper Island";
+    "A former professional fighter who's studying to become a Fontend Developer at Hyper Island. <br> \
+     I've got a passion for creating, solving problems and working with people. <br><br> \
+     I'm currently looking for internship opportunities between 25/9-2023 to 29/3-2024.";
 }
 
 function enlarge2() {
   document.getElementById("modal").style.display = "block";
+  document.getElementById("modal-link1").style.display = "none";
   document.getElementById("modal-h1").innerHTML = "My previous work";
-  document.getElementById("modal-p").innerHTML = "Some of my current projects";
+  document.getElementById("modal-p").innerHTML = "Some of my current projects:";
+  document.getElementById("modal-link3").style.display = "block";
+
 }
 
 function enlarge3() {
   document.getElementById("modal").style.display = "block";
+  document.getElementById("modal-link1").style.display = "none";
   document.getElementById("modal-h1").innerHTML = "Get in touch with me";
-  document.getElementById("modal-p").innerHTML = "Phone: +46 73-999-XX XX <br> Mail: jonathan.zeray@hotmail.com";
+  document.getElementById("modal-p").innerHTML =
+    "Phone: +46 73-999-XX XX <br> Mail: jonathan.zeray@hotmail.com";
 }
 
 function enlarge4() {
   document.getElementById("modal").style.display = "block";
   document.getElementById("modal-h1").innerHTML = "My Github account";
-  document.getElementById("modal-p").innerHTML = "https://github.com/JonathanZeray";
-
+  document.getElementById("modal-p").innerHTML = "";
+  document.getElementById("modal-link1").style.display = "block";
 }
 
 function enlarge5() {
   document.getElementById("modal").style.display = "block";
+  document.getElementById("modal-link1").style.display = "none";
   document.getElementById("modal-h1").innerHTML = "My LinkedIn profile";
-  document.getElementById("modal-p").innerHTML = "linkedin/JonathanZeray";
-
+  document.getElementById("modal-p").innerHTML = "";
+  document.getElementById("modal-link2").style.display = "block";
 }
 
 function enlarge6() {
   document.getElementById("modal").style.display = "block";
+  document.getElementById("modal-link1").style.display = "none";
   document.getElementById("modal-h1").innerHTML = "CV & Personal letter";
   document.getElementById("modal-p").innerHTML = "Blablabla..";
-
 }
-
-
 
 // window.onclick = function(event) {
 //   if (event.target == modal) {
