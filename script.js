@@ -28,83 +28,53 @@ window.onload = function () {
       iteration += 1 / 2;
     }, 50);
   };
+  
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function() {myFunction()};
+  
+  // Get the navbar
+  var navbar = document.getElementById("navbar");
+  
+  // Get the offset position of the navbar
+var sticky = navbar.offsetTop;
 
-  //////////////////   Container Hover Logic        //////////////////////////
-
-  document.getElementById("cards").onmousemove = (e) => {
-    for (const card of document.getElementsByClassName("card")) {
-      const rect = card.getBoundingClientRect(),
-        x = e.clientX - rect.left,
-        y = e.clientY - rect.top;
-
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-    }
-  };
-};
-
-/////////// MODAL LOGIC (This following code process made me miss React and it's reusable components..) /////////
-
-let modal_btn = document.getElementById("modal-btn");
-
-function modal_close() {
-  document.getElementById("modal").style.display = "none";
-  document.getElementById("modal-link1").style.display = "none";
-  document.getElementById("modal-link2").style.display = "none";
-  document.getElementById("modal-link3").style.display = "none";
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 }
 
-function enlarge1() {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-link1").style.display = "none";
-  document.getElementById("modal-h1").innerHTML = "Get to know me";
-  document.getElementById("modal-p").innerHTML =
-    "A former professional Muay Thai fighter who's studying to become a Frontend Developer at Hyper Island. <br> \
-     I've got a passion for creating, solving problems and working with people. <br><br> \
-     I'm currently looking for internship opportunities between 25/9-2023 to 29/3-2024.";
+function homeScroll() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });}
+
+function aboutScroll() {
+  window.scrollTo({
+    top: 610,
+    left: 0,
+    behavior: "smooth",
+  });
 }
 
-function enlarge2() {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-link1").style.display = "none";
-  document.getElementById("modal-h1").innerHTML = "My previous work";
-  document.getElementById("modal-p").innerHTML = "Some of my current projects:";
-  document.getElementById("modal-link3").style.display = "block";
-
+function projectScroll() {
+  window.scrollTo({
+    top: 1219.3333740234375,
+    left: 0,
+    behavior: "smooth",
+  });
 }
 
-function enlarge3() {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-link1").style.display = "none";
-  document.getElementById("modal-h1").innerHTML = "Get in touch with me";
-  document.getElementById("modal-p").innerHTML =
-    "Phone: +46 73-999-XX XX <br> Mail: jonathan.zeray@hotmail.com";
-}
+function contactScroll() {
+  window.scrollTo({
+    top: 1828,
+    left: 0,
+    behavior: "smooth",
+  });}
 
-function enlarge4() {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-h1").innerHTML = "My Github account";
-  document.getElementById("modal-p").innerHTML = "";
-  document.getElementById("modal-link1").style.display = "block";
-}
-
-function enlarge5() {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-link1").style.display = "none";
-  document.getElementById("modal-h1").innerHTML = "My LinkedIn profile";
-  document.getElementById("modal-p").innerHTML = "";
-  document.getElementById("modal-link2").style.display = "block";
-}
-
-function enlarge6() {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-link1").style.display = "none";
-  document.getElementById("modal-h1").innerHTML = "CV & Personal letter";
-  document.getElementById("modal-p").innerHTML = "Blablabla..";
-}
-
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }

@@ -3,18 +3,20 @@
 }
 
 body {
-  /* background-color: black; */
-  background: #cac531; /* fallback for old browsers */
+  /* background-color: black; 
+  background: #cac531; fallback for old browsers 
   background: -webkit-linear-gradient(
     to right,
     #f3f9a7,
     #cac531
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); /* Chrome 10-25, Safari 5.1-6 
   background: linear-gradient(
     to right,
     #f3f9a7,
     #cac531
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-color: #f9f9f9;
 
   margin: 0px;
   padding: 0px;
@@ -25,6 +27,48 @@ body {
   place-items: center;
   height: 100vh;
   margin: 0rem;
+}
+
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: transparent;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+
+/* Navbar links */
+#navbar button {
+  float: left;
+  display: block;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  font-size: 30px;
+
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 .name {
@@ -52,6 +96,7 @@ body {
   text-decoration: none;
   font-size: 1.8rem;
   margin: 0;
+  font-weight: bold;
 }
 
 /* .role-title:hover {
@@ -59,194 +104,140 @@ body {
 } */
 
 .selfie {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 20px;
 }
 
 .selfie:hover {
   transform: scale(1.02);
   transition: 0.8s;
-  box-shadow: 10px 10px 1px 1px rgba(0, 0, 255, 0.2);
+  box-shadow: 7px 7px 1px 1px rgba(0, 0, 255, 0.2);
 }
 
-/* ---------- ------------- ------------ SECOND SECTION ----------- -------------------- ------------ */
+/* card stacking section */
 
-.second-section {
-  height: 100vh;
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.section-two {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: "Space Mono", monospace;
+  background: #cac531; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f3f9a7,
+    #cac531
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f3f9a7,
+    #cac531);
 }
 
-#cards {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 950px;
-  gap: 8px;
-  width: calc(100% - 20px);
-}
-
-#cards:hover > .card > .card-border {
-  opacity: 1;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.1);
-  height: 260px;
-  width: 300px;
-  border-radius: 10px;
-  cursor: pointer;
-  position: relative;
-}
-
-.card:hover::before {
-  opacity: 1;
-}
-
-.card::before,
-.card > .card-border {
-  border-radius: inherit;
-  opacity: 0;
-  transition: opacity 500ms;
-  content: "";
-  z-index: 2;
-  height: 100%;
-  left: 0px;
-  position: absolute;
-  top: 0px;
+.kort {
   width: 100%;
+  height: 100vh;
+  color: white;
+  /* display: flex; */
+  position: sticky;
+  bottom: 0;
 }
 
-.card::before {
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.1),
-    transparent 40%
-  );
+.kort-1 {
+  background-color: #fcf003;
+  color: black;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+}
+.kort-2 {
+  background-color: #0202e0;
   z-index: 3;
 }
-
-.card > .card-border {
-  background: radial-gradient(
-    400px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 2),
-    transparent 100%
-  );
-  z-index: 1;
-}
-
-.card > .card-content {
-  /* background-image: url("https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"); */
-  background-color: var(--card-color);
-  border-radius: inherit;
-  margin: 1px;
-  position: relative;
-  height: calc(100% - 2px);
-  width: calc(100% - 2px);
+.kort-3 {
+  background-color: green;
   z-index: 2;
 }
 
-/* --- --- ---- ----  */
-h2,
-h3,
-h4,
-span {
-  color: rgb(240, 240, 240);
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
+.text-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.card-info-wrapper {
-  width: 100%;
-  height: 100%;
+.image-container {
+  display: flex;
   align-items: flex-end;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.image-container > img {
+  height: 300px;
+  width: 300px;
+}
+
+.scroll-header {
+  font-size: 7.5em;
+  line-height: 0.8;
+  padding: 100px 0 0 0;
+  margin: 0 0 100px 15px;
+}
+
+.scroll-text {
+  font-family: 'Signika', sans-serif;
+  padding: 0 15px;
+  /* margin-top: 250px; */
+  font-size: 16px;
+}
+
+.project-container {
   display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  margin-left: 20px;
-  /* padding: 0px 20px; */
+  justify-content: space-evenly;
 }
 
-.card-info-title > h3 {
-  font-size: 2rem;
-  line-height: 1px;
+.project-box {
+  border: 1.5px solid white;
+  width: 275px;
+  height: 250px;
+  border-radius: 5px;
 }
 
-.card-info-title > h4 {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9em;
-  margin-top: 8px;
+.project-box > a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
 }
 
-/* --- --- MODAL --- --- */
-
-.modal {
-  background-color: whitesmoke;
-  font-family: "Space Mono", monospace;
-  font-size: 2rem;
-  border-radius: 10px;
-  width: 700px;
-  height: 350px;
-  opacity: 0.98;
-  z-index: 9999;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  display: none;
+.project-box > a:hover {
+  text-decoration: underline;
 }
 
-.modal > a {
-  font-size: 1.5rem;
-  color: black;
-  display: none;
+.project-box:hover {
+  transform: scale(1.05);
+  transition: 0.8s;
 }
 
-/* position: absolute;
-  right: 300px;
-  top: 730px;
-*/
-
-.modal > h1,
-p {
-  padding: 0;
-  margin: 0 10px;
-
+.project-box-header-text {
+  text-decoration: underline;
+  margin: 5px 0 0 10px;
 }
 
-.modal > p {
-  font-size: 20px;
+.project-box-text {
+  margin: 15px 0 15px 10px;
+  font-size: 0.8em;
 }
 
-.modal-btn {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0 120px 5px 120px;
-  text-align: center;
-  border-radius: 10px;
-  font-family: "Space Mono", monospace;
-  font-size: 20px;
-  cursor: pointer;
+.testbild {
+  height: 100vh;
 }
 
-#modal-link1,
-#modal-link2,
-#modal-link3 {
-  display: none;
+.hover-2 {
+  background: 
+    linear-gradient(#f9f9f9 0 0) no-repeat
+    calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + .01em);
+  transition: .2s calc(var(--i, 0) * .3s), background-position .2s calc(.2s - calc(var(--i, 0) * .2s));
 }
-
-#modal-link3 > ul {
-  font-size: 24px;
-  margin-left: 16px;
-  list-style-type: none;
-  margin-top: 10px;
-  padding-top: 0;
-}
-
-#modal-link3 > ul > li > a:visited {
-  color: black;
+.hover-2:hover {
+  --i: 1;
 }
