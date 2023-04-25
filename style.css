@@ -49,13 +49,8 @@ body {
   border: none;
   cursor: pointer;
   font-family: "Space Mono", monospace;
-  font-size: 30px;
+  font-size: 26px;
 
-}
-
-/* Page content */
-.content {
-  padding: 16px;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -64,11 +59,6 @@ body {
   top: 0;
   width: 100%;
   z-index: 10;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
 }
 
 .name {
@@ -188,7 +178,7 @@ body {
   font-family: 'Signika', sans-serif;
   padding: 0 15px;
   /* margin-top: 250px; */
-  font-size: 16px;
+  font-size: .875rem;
 }
 
 .project-container {
@@ -220,6 +210,7 @@ body {
 
 .project-box-header-text {
   text-decoration: underline;
+  text-underline-offset: 4px;
   margin: 5px 0 0 10px;
 }
 
