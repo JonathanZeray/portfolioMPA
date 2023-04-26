@@ -1,25 +1,11 @@
-:root {
-  --card-color: rgb(30, 30, 30);
-}
-
 body {
-  /* background-color: black; 
-  background: #cac531; fallback for old browsers 
-  background: -webkit-linear-gradient(
-    to right,
-    #f3f9a7,
-    #cac531
-  ); /* Chrome 10-25, Safari 5.1-6 
-  background: linear-gradient(
-    to right,
-    #f3f9a7,
-    #cac531
-  );  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background-color: #f9f9f9;
-
+  background-color: #F2E3DB;
   margin: 0px;
   padding: 0px;
+}
+
+body::-webkit-scrollbar {
+  width: 0;               /* width of the entire scrollbar */
 }
 
 .start-section {
@@ -61,12 +47,12 @@ body {
   z-index: 10;
 }
 
-.name {
+.name-banner {
   font-family: "Space Mono", monospace;
-  font-size: clamp(3rem, 8vw, 9rem);
+  /* font-size: clamp(2rem, 8vw, 9rem); */
+  font-size: 4.5rem;
   color: black;
   font-weight: 900;
-  /* padding: 0rem clamp(1rem, 2vw, 3rem); */
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
   padding: 0 15px;
   margin: 10px;
@@ -75,23 +61,6 @@ body {
   box-shadow: 10px 10px 2px 2px rgba(0, 0, 255, 0.2);
 }
 
-.name:hover {
-  /* background-color: whitesmoke; */
-  color: black;
-}
-
-.role-title {
-  color: black;
-  font-family: "Space Mono", monospace;
-  text-decoration: none;
-  font-size: 1.8rem;
-  margin: 0;
-  font-weight: bold;
-}
-
-/* .role-title:hover {
-  text-decoration: underline;
-} */
 
 .selfie {
   width: 250px;
@@ -105,7 +74,17 @@ body {
   box-shadow: 7px 7px 1px 1px rgba(0, 0, 255, 0.2);
 }
 
-/* card stacking section */
+.role-title {
+  color: black;
+  font-family: "Space Mono", monospace;
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+
+/* CARD stacking section */
 
 .section-two {
   margin: 0;
@@ -113,42 +92,43 @@ body {
   box-sizing: border-box;
   /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   font-family: "Space Mono", monospace;
-  background: #cac531; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f3f9a7,
-    #cac531
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #f3f9a7,
-    #cac531);
-}
+    }
 
-.kort {
+  /* Hover effect for navbar */
+.nav-hover {
+      background: 
+        linear-gradient(#E1D9D1 0 0) no-repeat
+        calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + .01em);
+      transition: .2s calc(var(--i, 0) * .3s), background-position .2s calc(.2s - calc(var(--i, 0) * .2s));
+    }
+.nav-hover:hover {
+      --i: 1;
+    }
+
+.card {
   width: 100%;
   height: 100vh;
-  color: white;
-  /* display: flex; */
+  color: #E1D9D1;
   position: sticky;
   bottom: 0;
 }
 
-.kort-1 {
-  background-color: #fcf003;
-  color: black;
+.card-1 {
+  background-color: #41644A;
   z-index: 4;
   display: flex;
   justify-content: space-between;
 }
-.kort-2 {
-  background-color: #0202e0;
+.card-2 {
+  background-color: #263A29;
   z-index: 3;
 }
-.kort-3 {
-  background-color: green;
+.card-3 {
+  background-color: #E86A33;
   z-index: 2;
 }
+
+/* Card-1 text & image containers */
 
 .text-container {
   display: flex;
@@ -167,12 +147,16 @@ body {
   width: 300px;
 }
 
+/* Headers on card stacking */
+
 .scroll-header {
   font-size: 7.5em;
   line-height: 0.8;
   padding: 100px 0 0 0;
   margin: 0 0 100px 15px;
 }
+
+/* p-tags on card stacking */
 
 .scroll-text {
   font-family: 'Signika', sans-serif;
@@ -181,29 +165,31 @@ body {
   font-size: .875rem;
 }
 
+/* card-2 PROJECTS */
+
 .project-container {
   display: flex;
   justify-content: space-evenly;
 }
 
-.project-box {
-  border: 1.5px solid white;
+.project-boxes {
+  border: 1.5px solid #E1D9D1;
   width: 275px;
   height: 250px;
   border-radius: 5px;
 }
 
-.project-box > a {
-  color: white;
+.project-boxes > a {
+  color: #E1D9D1;
   margin-left: 10px;
   text-decoration: none;
 }
 
-.project-box > a:hover {
+.project-boxes > a:hover {
   text-decoration: underline;
 }
 
-.project-box:hover {
+.project-boxes:hover {
   transform: scale(1.05);
   transition: 0.8s;
 }
@@ -219,16 +205,5 @@ body {
   font-size: 0.8em;
 }
 
-.testbild {
-  height: 100vh;
-}
+/* Card-3 CONTACT */
 
-.hover-2 {
-  background: 
-    linear-gradient(#f9f9f9 0 0) no-repeat
-    calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + .01em);
-  transition: .2s calc(var(--i, 0) * .3s), background-position .2s calc(.2s - calc(var(--i, 0) * .2s));
-}
-.hover-2:hover {
-  --i: 1;
-}
