@@ -48,6 +48,9 @@ function myFunction() {
 }
 }
 
+/* using functions with scrollTo to get to a certain position on page. 
+Functions are added to onClick on navbar */
+
 function homeScroll() {
   window.scrollTo({
     top: 0,
