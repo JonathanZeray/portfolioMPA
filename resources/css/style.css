@@ -331,6 +331,10 @@ input {
 }
 
 @media screen and (max-width: 850px) {
+  #navbar {
+    display: none;
+  }
+
   .start-section {
     height: 75vh;
   }
@@ -424,61 +428,4 @@ input {
   textarea {
     height: 40px;
   }
-
-  #navbar {
-    display: none;
-  }
 }
-
-
-
-/* 
-
-Certain phones with shorter height does not support the website, this solution
-solves that issues for phones but overwrites desktop settings. 
-Have to come back to this. 
-
-@media only screen and (max-height: 830px) {
-  .scroll-header {
-    margin: 0 0 20px 15px;
-    padding-top: 15px;
-  }
-
-  .contact-form {
-    height: 100%;
-  }
-
-  textarea {
-    height: 40px;
-  }
-
-  form {
-    margin: 0;
-  }
-
-  .form-header-text {
-    margin: 15px 0 5px 0;
-  }
-
-.project-container {
-  flex-direction: column;
-  justify-content: center;
-}
-
-.project-boxes > a {
-  font-size: 12px;
-}
-
-.project-boxes > br {
-  display: inline;
-}
-
-.project-box-header-text {
-  margin: 0;
-}
-
-.project-box-text {
-  margin: 0;
-}
-
-} */
