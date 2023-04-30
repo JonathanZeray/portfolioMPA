@@ -325,7 +325,8 @@ input {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 75px;
+    margin-top: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -396,7 +397,8 @@ input {
   .other-contacts {
     height: 100%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 10px;
+    border: 1px solid #e1d9d1;
   }
 
   .card-3 > a {
@@ -407,7 +409,16 @@ input {
   .contact-form {
     border: none;
     margin: 0;
-    height: 350px;
+    height: 300px;
+  }
+
+  .form-header-text {
+    /* font-size: 20px; */
+    margin: 0 0 5px 0;
+  }
+
+  .form-label {
+    font-size: 16px;
   }
 
   textarea {

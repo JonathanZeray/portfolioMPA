@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jonathan Zeray - Frontend Developer</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./resources/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Signika&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js"></script>
+    <script src="./resources/js/script.js"></script>
   </head>
   <body>
     <div class="page-container">
@@ -34,126 +34,199 @@
           <button onclick="projectScroll()" class="nav-hover">PROJECTS</button>
           <button onclick="contactScroll()" class="nav-hover">CONTACT</button>
         </div>
-      <h1 data-value="JONATHAN ZERAY" class="name-banner">JONATHAN ZERAY</h1>
-      <img src="images/jzCrop.png" alt="picture of myself" class="selfie" />
-      <h2 class="role-title">< Frontend Developer student / ></h2>
-    </section>
-    <section class="section-two">
-      <!-- <div class="header"></div> -->
-      <div class="card card-1">
-        <div class="text-container">
-          <h1 class="scroll-header">
-            ABOUT ME
-          </h1>
-          <p class="scroll-text">
-            As the over the top banner above mentioned - my name is Jonathan Zeray.
-            <br /><br />
-            I'm a former professional Muay Thai fighter currently studying Frontend Development at Hyper Island. <br>
-            Throughout my academic career, I have worked on numerous group projects,<br />
-            which has allowed me to gain valuable experience working with teams. <br>
-            I've got a passion for creating, designing, solving problems and working with people. <br />
-            I am confident that my experience with agile methodologies and my ability to <br /> work effectively in teams will make me an asset to any project.<br /> <br /> <br>
-            I'm currently looking for internship opportunities between <span> 25/9-2023
-            to 29/3-2024. </span>
-          </p>
-          <div class="icon-container">
-            <img src="./icons/html5.svg" alt="html5 icon">
-            <img src="./icons/css3.svg" alt="css3 icon">
-            <img src="./icons/javascript.svg" alt="javascript icon"> <br>
-            <img src="./icons/tailwindcss.svg" alt="tailwind icon">
-            <img src="./icons/react.svg" alt="react icon">
-            <img src="./icons/nextjs.svg" alt="nextjs icon"> <br>
-            <img src="./icons/nodejs.svg" alt="node icon">
-            <img src="./icons/mongodb.svg" alt="mongo icon">
-            <img src="./icons/postgresql.svg" alt="postgresql icon">
-          </div>
-        </div>
-        <div class="image-container">
-          <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="random picture of code">
-        </div>
-      </div>
-      <div class="card card-2">
-        <h1 class="scroll-header">PROJECTS</h1>
-        <p class="scroll-text"></p>
-        <div class="project-container">
-          <div class="project-boxes">
-            <p class="project-box-header-text">#1: Muhammad Ali Gallery</p>
-            <p class="project-box-text">
-              An image gallery dedicated to a personal inspiration for me. <br />
-              Inspired by 'www.palette.supply' <br>
-              Made with HTML/CSS/JS and GSAP animations.
-            </p> <br>
-            <a href="https://adorable-cobbler-bcb538.netlify.app/"
-            target="_blank" >Link to project &#8658;</a> <br>
-            <a href="https://github.com/JonathanZeray/muhammadAliGallery"
-            target="_blank" >Link to Github repo &#8658;</a>
-          </div>
-          <div class="project-boxes">
-            <p class="project-box-header-text">#2: React NIKE Mockup Site</p>
-            <p class="project-box-text">
-              Group project for our 1st React course. <br>
-              Created based on Figma design. <br>
-              I mainly worked with design and cart functionality.
-            </p> <br>
-            <a href="https://react-nike-website.vercel.app"
-            target="_blank" >Link to project &#8658;</a> <br>
-            <a href="https://github.com/JonathanZeray/Nike-Website-React"
-            target="_blank" >Link to Github repo &#8658;</a>
-          </div>
-          <div class="project-boxes">
-            <p class="project-box-header-text">#3: Arcade games platform</p>
-            <p class="project-box-text">
-              Arcade consisting of four different games I've created. <br>
-              Games store highscores in either localstorage or firebase db. <br>
-              Animations made with GSAP.
-              
-            </p> <br>
-            <a href="https://magnificent-piroshki-43bd69.netlify.app"
-            target="_blank" >Link to project &#8658;</a> <br>
-            <a href="https://github.com/JonathanZeray/animatedArcade"
-            target="_blank" >Link to Github repo &#8658;</a>
-          </div>
-        </div>
-      </div>
-      <div class="card card-3">
-        
-        <div class="contact-container">
-
-          <div class="contact-text-container">
-            <h1 class="scroll-header">
-              GET IN <br />
-              TOUCH
-            </h1>
+        <h1 data-value="JONATHAN ZERAY" class="name-banner">JONATHAN ZERAY</h1>
+        <img
+          src="./resources/images/jzCrop.png"
+          alt="picture of myself"
+          class="selfie"
+        />
+        <h2 class="role-title">< Frontend Developer student / ></h2>
+      </section>
+      <section class="section-two">
+        <!-- <div class="header"></div> -->
+        <div class="card card-1">
+          <div class="text-container">
+            <h1 class="scroll-header">ABOUT ME</h1>
             <p class="scroll-text">
-              If my profile looks interesting to your company, dont hesitate to reach out! <br>
-              I'm always open for collaborations or new opportunities.
+              As the over the top banner above mentioned - my name is Jonathan
+              Zeray.
+              <br /><br />
+              I'm a former professional Muay Thai fighter currently studying
+              Frontend Development at Hyper Island. <br />
+              Throughout my academic career, I have worked on numerous group
+              projects,<br />
+              which has allowed me to gain valuable experience working with
+              teams. <br />
+              I've got a passion for creating, designing, solving problems and
+              working with people. <br />
+              I am confident that my experience with agile methodologies and my
+              ability to <br />
+              work effectively in teams will make me an asset to any project.<br />
+              <br />
+              <br />
+              I'm currently looking for internship opportunities between
+              <span> 25/9-2023 to 29/3-2024. </span>
             </p>
-                    <div class="other-contacts">
-          <a href="https://www.github.com/JonathanZeray" target="_blank">My Github profile</a>
-          <a href="http://linkedin.com/in/jonathan-zeray-2719a425b" target="_blank">My Linkedin profile</a>
-        </div>
+            <div class="icon-container">
+              <img src="./resources/icons/html5.svg" alt="html5 icon" />
+              <img src="./resources/icons/css3.svg" alt="css3 icon" />
+              <img
+                src="./resources/icons/javascript.svg"
+                alt="javascript icon"
+              />
+              <br />
+              <img
+                src="./resources/icons/tailwindcss.svg"
+                alt="tailwind icon"
+              />
+              <img src="./resources/icons/react.svg" alt="react icon" />
+              <img src="./resources/icons/nextjs.svg" alt="nextjs icon" />
+              <br />
+              <img src="./resources/icons/nodejs.svg" alt="node icon" />
+              <img src="./resources/icons/mongodb.svg" alt="mongo icon" />
+              <img
+                src="./resources/icons/postgresql.svg"
+                alt="postgresql icon"
+              />
+            </div>
           </div>
-          <div class="contact-form-container">
-          <div class="contact-form">  
-            <form autocomplete="off" action="https://formsubmit.co/jonathan.zeray@hotmail.com" method="POST">
-            <h2 class="form-header-text">Send me an email</h2>
-              <input type="hidden" name="_subject" value="Nytt mail genom portfolio hemsidan.">
-              <label class="form-label" for="name">Name:</label> <br>
-              <input type="text" name="name" required size="25" value=""> <br> 
-              <label class="form-label" for="email">Email address:</label> <br>
-              <input type="email" name="email" size="27" required> <br>
-              <label class="form-label" for="message">Message:</label><br>
-              <textarea name="message" id="" cols="30" rows="6" required ></textarea>
-              <div class="form-btn-container">
-                <button class="form-submit-btn" type="submit">Send</button>
+          <div class="image-container">
+            <img
+              src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+              alt="random picture of code"
+            />
+          </div>
+        </div>
+        <div class="card card-2">
+          <h1 class="scroll-header">PROJECTS</h1>
+          <p class="scroll-text"></p>
+          <div class="project-container">
+            <div class="project-boxes">
+              <p class="project-box-header-text">#1: Muhammad Ali Gallery</p>
+              <p class="project-box-text">
+                An image gallery dedicated to a personal inspiration for me.
+                <br />
+                Inspired by 'www.palette.supply' <br />
+                Made with HTML/CSS/JS and GSAP animations.
+              </p>
+              <br />
+              <a
+                href="https://adorable-cobbler-bcb538.netlify.app/"
+                target="_blank"
+                >Link to project &#8658;</a
+              >
+              <br />
+              <a
+                href="https://github.com/JonathanZeray/muhammadAliGallery"
+                target="_blank"
+                >Link to Github repo &#8658;</a
+              >
+            </div>
+            <div class="project-boxes">
+              <p class="project-box-header-text">#2: React NIKE Mockup Site</p>
+              <p class="project-box-text">
+                Group project for our 1st React course. <br />
+                Created based on Figma design. <br />
+                I mainly worked with design and cart functionality.
+              </p>
+              <br />
+              <a href="https://react-nike-website.vercel.app" target="_blank"
+                >Link to project &#8658;</a
+              >
+              <br />
+              <a
+                href="https://github.com/JonathanZeray/Nike-Website-React"
+                target="_blank"
+                >Link to Github repo &#8658;</a
+              >
+            </div>
+            <div class="project-boxes">
+              <p class="project-box-header-text">#3: Arcade games platform</p>
+              <p class="project-box-text">
+                Arcade consisting of four different games I've created. <br />
+                Games store highscores in either localstorage or firebase db.
+                <br />
+                Animations made with GSAP.
+              </p>
+              <br />
+              <a
+                href="https://magnificent-piroshki-43bd69.netlify.app"
+                target="_blank"
+                >Link to project &#8658;</a
+              >
+              <br />
+              <a
+                href="https://github.com/JonathanZeray/animatedArcade"
+                target="_blank"
+                >Link to Github repo &#8658;</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card card-3">
+          <div class="contact-container">
+            <div class="contact-text-container">
+              <h1 class="scroll-header">
+                GET IN <br />
+                TOUCH
+              </h1>
+              <p class="scroll-text">
+                If my profile looks interesting to your company, dont hesitate
+                to reach out! <br />
+                I'm always open for collaborations or new opportunities.
+              </p>
+              <div class="other-contacts">
+                <a
+                  href="./resources/resume/Jonathan Zeray - Resume_CV.pdf"
+                  target="_blank"
+                  >My Resume</a
+                >
+                <a href="https://www.github.com/JonathanZeray" target="_blank"
+                  >My Github profile</a
+                >
+                <a
+                  href="http://linkedin.com/in/jonathan-zeray-2719a425b"
+                  target="_blank"
+                  >My Linkedin profile</a
+                >
               </div>
-            </form>
+            </div>
+            <div class="contact-form-container">
+              <div class="contact-form">
+                <form
+                  autocomplete="off"
+                  action="https://formsubmit.co/jonathan.zeray@hotmail.com"
+                  method="POST"
+                >
+                  <h2 class="form-header-text">Send me an email</h2>
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="Nytt mail genom portfolio hemsidan."
+                  />
+                  <label class="form-label" for="name">Name:</label> <br />
+                  <input type="text" name="name" required size="25" value="" />
+                  <br />
+                  <label class="form-label" for="email">Email address:</label>
+                  <br />
+                  <input type="email" name="email" size="27" required /> <br />
+                  <label class="form-label" for="message">Message:</label><br />
+                  <textarea
+                    name="message"
+                    id=""
+                    cols="30"
+                    rows="6"
+                    required
+                  ></textarea>
+                  <div class="form-btn-container">
+                    <button class="form-submit-btn" type="submit">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
   </body>
-  </html>
-  
+</html>
