@@ -154,9 +154,10 @@ span {
   margin-bottom: 20px;
 }
 
-.image-container > img {
+.code-image {
   height: 350px;
   width: 350px;
+  border-radius: 12px;
 }
 
 /* Headers on card stacking */
@@ -177,7 +178,6 @@ span {
 }
 
 /* card-2 PROJECTS */
-
 
 .project-container {
   display: flex;
@@ -229,7 +229,7 @@ span {
 .contact-form-container {
   display: flex;
   align-items: center;
-  margin: 100px 15px 50px 0;
+  margin: 100px 50px 50px 0;
 }
 
 .contact-form {
@@ -238,7 +238,7 @@ span {
   justify-content: center;
   height: 450px;
   width: 400px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1.5px solid black;
 }
 
@@ -366,7 +366,6 @@ input {
   .card-1 {
     display: block;
   }
-
 
   .project-container {
     display: block;
