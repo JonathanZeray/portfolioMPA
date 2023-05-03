@@ -59,25 +59,30 @@ function homeScroll() {
   });}
 
 function aboutScroll() {
+  const screenHeight = window.innerHeight;
+  const scrollPosition = screenHeight * 1;
   window.scrollTo({
-    top: 610,
+    top: scrollPosition,
     left: 0,
     behavior: "smooth",
   });
 }
 
 function projectScroll() {
+  const screenHeight = window.innerHeight;
+  const scrollPosition = screenHeight * 2;
   window.scrollTo({
-    top: 1219.3333740234375,
+    top: scrollPosition,
     left: 0,
     behavior: "smooth",
   });
 }
 
 function contactScroll() {
+  const screenHeight = window.innerHeight;
+  const scrollPosition = screenHeight * 3;
   window.scrollTo({
-    top: 1828,
+    top: scrollPosition,
     left: 0,
     behavior: "smooth",
   });}
-
