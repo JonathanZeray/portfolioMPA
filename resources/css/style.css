@@ -140,7 +140,9 @@ span {
 .icon-container {
   display: flex;
   flex-direction: row;
-  margin: 50px 0 50px 15px;
+  flex-wrap: wrap;
+  width: 55%;
+  margin: 30px 0 50px 15px;
 }
 
 .icon-container > img {
@@ -154,9 +156,10 @@ span {
   margin-bottom: 20px;
 }
 
-.image-container > img {
+.code-image {
   height: 350px;
   width: 350px;
+  border-radius: 12px;
 }
 
 /* Headers on card stacking */
@@ -177,7 +180,6 @@ span {
 }
 
 /* card-2 PROJECTS */
-
 
 .project-container {
   display: flex;
@@ -229,7 +231,7 @@ span {
 .contact-form-container {
   display: flex;
   align-items: center;
-  margin: 100px 15px 50px 0;
+  margin: 100px 50px 50px 0;
 }
 
 .contact-form {
@@ -238,7 +240,7 @@ span {
   justify-content: center;
   height: 450px;
   width: 400px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1.5px solid black;
 }
 
@@ -325,8 +327,9 @@ input {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 100%;
   }
 }
 
@@ -340,8 +343,9 @@ input {
   }
 
   .card {
-    height: 100%;
+    height: 100%; 
     padding-bottom: 25px;
+    overflow-x: hidden;
   }
 
   .scroll-header {
@@ -366,7 +370,6 @@ input {
   .card-1 {
     display: block;
   }
-
 
   .project-container {
     display: block;
