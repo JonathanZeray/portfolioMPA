@@ -1,5 +1,5 @@
 body {
-  background-color: #f2e3db;
+  background-color: whitesmoke;
   margin: 0px;
   padding: 0px;
 }
@@ -18,24 +18,24 @@ body::-webkit-scrollbar {
 /* Style the navbar */
 #navbar {
   overflow: hidden;
-  background-color: transparent;
+  background-color: whitesmoke;
   font-family: "Space Mono", monospace;
   font-size: 24px;
 }
 
 /* Navbar links */
 #navbar button {
-  float: left;
-  display: block;
+  display: inline-block;
   color: black;
   font-weight: bold;
   text-align: center;
-  padding: 14px;
+  padding: 8px;
   text-decoration: none;
   border: none;
   cursor: pointer;
   font-family: "Space Mono", monospace;
-  font-size: 26px;
+  font-size: 16px;
+  height: 40px;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
 
 /* Hover effect for navbar */
 .nav-hover {
-  background: linear-gradient(#e1d9d1 0 0) no-repeat
+  background: linear-gradient(whitesmoke 0 0) no-repeat
     calc(200% - var(--i, 0) * 100%) 100% / 200%
     calc(100% * var(--i, 0) + 0.01em);
   transition: 0.2s calc(var(--i, 0) * 0.3s),
@@ -104,23 +104,24 @@ body::-webkit-scrollbar {
 .card {
   width: 100%;
   height: 100vh;
-  color: #e1d9d1;
+  color: #FFFFFF;
   position: sticky;
   bottom: 0;
 }
 
 .card-1 {
-  background-color: #41644a;
+  background-color: #1D1AE5;
   z-index: 4;
   display: flex;
   justify-content: space-between;
 }
 .card-2 {
-  background-color: #263a29;
+  background-color: #E46BA1;
   z-index: 3;
 }
 .card-3 {
-  background-color: #e86a33;
+  background-color: #FFE600;
+  color: #11190C;
   z-index: 2;
 }
 
@@ -194,7 +195,7 @@ span {
 }
 
 .project-boxes > a {
-  color: #e1d9d1;
+  color: #11190C;
   margin-left: 10px;
   text-decoration: none;
 }
@@ -239,26 +240,26 @@ span {
   align-items: center;
   justify-content: center;
   height: 450px;
-  width: 400px;
+  width: 350px;
   border-radius: 12px;
   border: 1.5px solid black;
 }
 
 .form-header-text {
   font-family: "Space Mono", monospace;
-  color: #e1d9d1;
+  color: #11190C;
   text-decoration: underline;
 }
 
 textarea {
   resize: none;
   margin: 5px 0 0 0;
-  background-color: #e1d9d1;
+  background-color: whitesmoke;
 }
 
 input {
   margin-bottom: 10px;
-  background-color: #e1d9d1;
+  background-color: whitesmoke;
   border: none;
   padding: 3px;
   font-family: "Space Mono", monospace;
@@ -295,7 +296,7 @@ input {
 .other-contacts > a {
   margin-right: 50px;
   font-size: 24px;
-  color: #e1d9d1;
+  color: #11190C;
   text-decoration: none;
 }
 
@@ -304,7 +305,7 @@ input {
 }
 
 .other-contacts > a {
-  background: linear-gradient(#e1d9d1 0 0) no-repeat
+  background: linear-gradient(#FFFFFF 0 0) no-repeat
     calc(200% - var(--i, 0) * 100%) 100% / 200%
     calc(100% * var(--i, 0) + 0.01em);
   transition: 0.2s calc(var(--i, 0) * 0.2s),
