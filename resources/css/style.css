@@ -104,24 +104,24 @@ body::-webkit-scrollbar {
 .card {
   width: 100%;
   height: 100vh;
-  color: #FFFFFF;
+  color: #ffffff;
   position: sticky;
   bottom: 0;
 }
 
 .card-1 {
-  background-color: #1D1AE5;
+  background-color: #1d1ae5;
   z-index: 4;
   display: flex;
   justify-content: space-between;
 }
 .card-2 {
-  background-color: #E46BA1;
+  background-color: #e46ba1;
   z-index: 3;
 }
 .card-3 {
-  background-color: #FFE600;
-  color: #11190C;
+  background-color: #ffe600;
+  color: #11190c;
   z-index: 2;
 }
 
@@ -136,7 +136,6 @@ span {
   text-decoration: underline;
   font-size: 18px;
 }
-
 
 .icon-container {
   display: flex;
@@ -182,42 +181,70 @@ span {
 
 /* card-2 PROJECTS */
 
-.project-container {
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
+  z-index: 3;
+  background-color: #e46ba1;
+}
+
+.projects-header-container {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
 }
 
-.project-boxes {
-  border: 1.5px solid #e1d9d1;
-  width: 275px;
-  height: 250px;
-  border-radius: 5px;
+.projects-header {
+  font-size: 7.5em;
+  line-height: 0.8;
+  padding: 20px 0 0 0;
+  margin-left: 15px;
 }
 
-.project-boxes > a {
-  color: #11190C;
-  margin-left: 10px;
-  text-decoration: none;
+.projects-text {
+  margin-left: 15px;
 }
 
-.project-boxes > a:hover {
-  text-decoration: underline;
+.sec1 {
+  padding-left: 0;
+  margin-left: 0;
 }
 
-.project-boxes:hover {
-  transform: scale(1.05);
-  transition: 0.8s;
+.project-image {
+  background-color: blue;
 }
 
-.project-box-header-text {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  margin: 5px 0 0 10px;
+.col1 {
+  background-color: whitesmoke;
 }
 
-.project-box-text {
-  margin: 15px 0 15px 10px;
-  font-size: 0.8em;
+.col {
+  display: flex;
+  gap: 3em;
+}
+
+.col > p {
+  font-size: 0.8rem;
+}
+
+.pin {
+  width: 100vw;
+  padding: 20vw 10vw;
+}
+
+
+.container > p {
+  font-size: 1.2rem;
+  width: 50vw;
+}
+.container {
+  display: flex;
+  width: 300vw;
+}
+
+.wrapper > section {
+  height: 100vh;
 }
 
 /* Card-3 CONTACT */
@@ -247,7 +274,7 @@ span {
 
 .form-header-text {
   font-family: "Space Mono", monospace;
-  color: #11190C;
+  color: #11190c;
   text-decoration: underline;
 }
 
@@ -296,7 +323,7 @@ input {
 .other-contacts > a {
   margin-right: 50px;
   font-size: 24px;
-  color: #11190C;
+  color: #11190c;
   text-decoration: none;
 }
 
@@ -305,7 +332,7 @@ input {
 }
 
 .other-contacts > a {
-  background: linear-gradient(#FFFFFF 0 0) no-repeat
+  background: linear-gradient(#ffffff 0 0) no-repeat
     calc(200% - var(--i, 0) * 100%) 100% / 200%
     calc(100% * var(--i, 0) + 0.01em);
   transition: 0.2s calc(var(--i, 0) * 0.2s),
@@ -344,7 +371,7 @@ input {
   }
 
   .card {
-    height: 100%; 
+    height: 100%;
     padding-bottom: 25px;
     overflow-x: hidden;
   }

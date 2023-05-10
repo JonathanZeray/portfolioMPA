@@ -23,7 +23,6 @@
       href="https://fonts.googleapis.com/css2?family=Signika&display=swap"
       rel="stylesheet"
     />
-    <script src="./resources/js/script.js"></script>
   </head>
   <body>
     <div class="page-container">
@@ -65,7 +64,7 @@
               <br />
               <br />
               I'm currently looking for internship opportunities between
-              <span> 25/9-2023 to 29/3-2024. </span>
+              <span class="anim"> 25/9-2023 to 29/3-2024. </span class="anim">
             </p>
             <div class="icon-container">
               <img src="./resources/icons/html5.svg" alt="html5 icon" />
@@ -101,72 +100,52 @@
             />
           </div>
         </div>
-        <div class="card card-2">
-          <h1 class="scroll-header">PROJECTS</h1>
-          <p class="scroll-text"></p>
-          <div class="project-container">
-            <div class="project-boxes">
-              <p class="project-box-header-text">#1: Muhammad Ali Gallery</p>
-              <p class="project-box-text">
-                An image gallery dedicated to a personal inspiration for me.
-                <br />
-                Inspired by 'www.palette.supply' <br />
-                Made with HTML/CSS/JS and GSAP animations.
-              </p>
-              <br />
-              <a
-                href="https://adorable-cobbler-bcb538.netlify.app/"
-                target="_blank"
-                >Link to project &#8658;</a
-              >
-              <br />
-              <a
-                href="https://github.com/JonathanZeray/muhammadAliGallery"
-                target="_blank"
-                >Link to Github repo &#8658;</a
-              >
-            </div>
-            <div class="project-boxes">
-              <p class="project-box-header-text">#2: React NIKE Mockup Site</p>
-              <p class="project-box-text">
-                Group project for our 1st React course. <br />
-                Created based on Figma design. <br />
-                I mainly worked with design and cart functionality.
-              </p>
-              <br />
-              <a href="https://react-nike-website.vercel.app" target="_blank"
-                >Link to project &#8658;</a
-              >
-              <br />
-              <a
-                href="https://github.com/JonathanZeray/Nike-Website-React"
-                target="_blank"
-                >Link to Github repo &#8658;</a
-              >
-            </div>
-            <div class="project-boxes">
-              <p class="project-box-header-text">#3: Arcade games platform</p>
-              <p class="project-box-text">
-                Arcade consisting of four different games I've created. <br />
-                Games store highscores in either localstorage or firebase db.
-                <br />
-                Animations made with GSAP.
-              </p>
-              <br />
-              <a
-                href="https://magnificent-piroshki-43bd69.netlify.app"
-                target="_blank"
-                >Link to project &#8658;</a
-              >
-              <br />
-              <a
-                href="https://github.com/JonathanZeray/animatedArcade"
-                target="_blank"
-                >Link to Github repo &#8658;</a
-              >
-            </div>
+        <div class="wrapper">
+          <div class="container scrollx">
+
+                <h1 class="projects-header">PROJECTS</h1>
+                
+              <section class="sec1 pin">
+
+                  <span class="col1">Project #1</span>
+                  <h1 class="col1">React Nike Mockup Site</h1>
+                  
+                  <div class="col col1">
+                    <p>Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem.</p>
+                  </div>
+                  <a href="https://react-nike-website.vercel.app" target="_blank"
+                  >Link to project &#8658;</a
+                  >
+                  <a
+                  href="https://github.com/JonathanZeray/Nike-Website-React"
+                  target="_blank"
+                  >Link to Github repo &#8658;</a
+                  >
+                </section>
+                
+                <section class="sec2 pin">
+                  <span class="anim">Project #2</span>
+                  <h1 class="anim">Muhammad Ali Gallery</h1>
+  
+                  <div class="col anim">
+                      <p>Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem.</p>
+                  </div>
+              </section>
+  
+              <section class="sec3 pin">
+                  <span class="anim">Project #3</span>
+                  <h1 class="anim">Arcade games platform.</h1>
+  
+                  <div class="col anim">
+                      <p>Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem.</p>
+                  </div>
+              </section>
           </div>
-        </div>
+      </div>
+        
         <div class="card card-3">
           <div class="contact-container">
             <div class="contact-text-container">
@@ -233,4 +212,7 @@
       </section>
     </div>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="./resources/js/script.js"></script>
 </html>

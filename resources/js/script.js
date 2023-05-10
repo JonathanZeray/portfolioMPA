@@ -80,9 +80,39 @@ function projectScroll() {
 
 function contactScroll() {
   const screenHeight = window.innerHeight;
-  const scrollPosition = screenHeight * 3;
+  const scrollPosition = screenHeight * 9;
   window.scrollTo({
     top: scrollPosition,
     left: 0,
-    behavior: "smooth",
+    // behavior: "smooth", 
+    /* removed smooth on contact, got weird when i went from contacts back to projects 
+     because of the horizontal scrolling*/
   });}
+
+
+/* 
+GSAP ANIMATIONS for horizontal scroll on projects page.
+*/
+
+const container = document.querySelector(".container");
+const sections = gsap.utils.toArray(".container section");
+const texts = gsap.utils.toArray('.anim');
+
+
+let scrollTween = gsap.to(sections, {
+  xPercent: -100 * (sections.length - 0.5), //0.1 for project in center
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".container",
+    pin: true,
+    scrub: 1,
+    end: "+=3000",
+    //snap: 1 / (sections.length - 1),
+    // markers: true,
+  }
+});
+
+console.log(1 / (sections.length - 1))
+
+
+
