@@ -38,6 +38,10 @@ body::-webkit-scrollbar {
   height: 40px;
 }
 
+#navbar button:hover {
+  color: white;
+}
+
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
@@ -65,11 +69,11 @@ body::-webkit-scrollbar {
   border-radius: 20px;
 }
 
-.selfie:hover {
+/* .selfie:hover {
   transform: scale(1.02);
   transition: 0.8s;
   box-shadow: 7px 7px 1px 1px rgba(0, 0, 255, 0.2);
-}
+} */
 
 .role-title {
   color: black;
@@ -91,7 +95,7 @@ body::-webkit-scrollbar {
 
 /* Hover effect for navbar */
 .nav-hover {
-  background: linear-gradient(whitesmoke 0 0) no-repeat
+  background: linear-gradient(black 0 0) no-repeat
     calc(200% - var(--i, 0) * 100%) 100% / 200%
     calc(100% * var(--i, 0) + 0.01em);
   transition: 0.2s calc(var(--i, 0) * 0.3s),
@@ -147,6 +151,7 @@ span {
 
 .icon-container > img {
   margin-right: 15px;
+  margin-bottom: 20px;
 }
 
 .image-container {
@@ -188,63 +193,64 @@ span {
   background-color: #e46ba1;
 }
 
-.projects-header-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 50px;
-}
-
-.projects-header {
-  font-size: 7.5em;
-  line-height: 0.8;
-  padding: 20px 0 0 0;
-  margin-left: 15px;
-}
-
-.projects-text {
-  margin-left: 15px;
-}
-
-.sec1 {
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.project-image {
-  background-color: blue;
-}
-
-.col1 {
-  background-color: whitesmoke;
-}
-
-.col {
-  display: flex;
-  gap: 3em;
-}
-
-.col > p {
-  font-size: 0.8rem;
-}
-
-.pin {
-  width: 100vw;
-  padding: 20vw 10vw;
-}
-
-
-.container > p {
-  font-size: 1.2rem;
-  width: 50vw;
-}
 .container {
   display: flex;
   width: 300vw;
 }
 
-.wrapper > section {
-  height: 100vh;
+.projects-header {
+  font-size: 7.5em;
+  line-height: 0.8;
+  padding: 10px 0 0 0;
+  margin: 75px 0 0 15px;
+  height: fit-content;
+}
+
+.pin {
+  width: 100vw;
+  padding: 15.5vw 10vw;
+}
+
+.col1 {
+  border-radius: 4px;
+  padding: 3px;
+  /* background-color: whitesmoke; white bg for all text fields */
+}
+
+.col {
+  display: flex;
+  gap: 2em;
+  /* background-color: whitesmoke;  white bg for p fields only */
+}
+
+.col > p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.project-links {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.project-links > a {
+  color: black;
+}
+.project-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.project-image {
+  height: 140px;
+  width: 250px;
+  border-radius: 4px;
+}
+
+.project-image:hover {  
+  box-shadow: 5px 4px #000000;
+  transform: scale(1.02);
 }
 
 /* Card-3 CONTACT */
@@ -281,12 +287,14 @@ span {
 textarea {
   resize: none;
   margin: 5px 0 0 0;
-  background-color: whitesmoke;
+  background-color: black;
+  color: white;
 }
 
 input {
   margin-bottom: 10px;
-  background-color: whitesmoke;
+  background-color: black;
+  color: white;
   border: none;
   padding: 3px;
   font-family: "Space Mono", monospace;

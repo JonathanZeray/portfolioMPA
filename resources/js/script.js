@@ -84,9 +84,9 @@ function contactScroll() {
   window.scrollTo({
     top: scrollPosition,
     left: 0,
-    // behavior: "smooth", 
-    /* removed smooth on contact, got weird when i went from contacts back to projects 
-     because of the horizontal scrolling*/
+    behavior: "smooth", 
+    /* might remove smooth on contact, 
+    have to go through entire horizontal scroll when I go from contacts back to projects & vice versa */
   });}
 
 
@@ -100,7 +100,7 @@ const texts = gsap.utils.toArray('.anim');
 
 
 let scrollTween = gsap.to(sections, {
-  xPercent: -100 * (sections.length - 0.5), //0.1 for project in center
+  xPercent: -100 * (sections.length - 0.4), 
   ease: "none",
   scrollTrigger: {
     trigger: ".container",
