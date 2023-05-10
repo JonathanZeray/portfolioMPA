@@ -100,7 +100,7 @@ const texts = gsap.utils.toArray('.anim');
 
 
 let scrollTween = gsap.to(sections, {
-  xPercent: -100 * (sections.length - 0.5), //0.1 for project in center
+  xPercent: -100 * (sections.length - 1), //0.1 for project in center
   ease: "none",
   scrollTrigger: {
     trigger: ".container",
