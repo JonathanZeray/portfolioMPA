@@ -219,12 +219,12 @@ span {
 
 .col {
   display: flex;
-  gap: 2em;
+  gap: 3em;
   /* background-color: whitesmoke;  white bg for p fields only */
 }
 
 .col > p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   margin: 0;
 }
 
@@ -249,7 +249,7 @@ span {
 }
 
 .project-image:hover {  
-  box-shadow: 5px 4px #000000;
+  box-shadow: 6px 6px #000000;
   transform: scale(1.02);
 }
 
