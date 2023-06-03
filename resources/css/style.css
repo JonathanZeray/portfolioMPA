@@ -1,5 +1,5 @@
 body {
-  background-color: #f2e3db;
+  background-color: whitesmoke;
   margin: 0px;
   padding: 0px;
 }
@@ -18,24 +18,27 @@ body::-webkit-scrollbar {
 /* Style the navbar */
 #navbar {
   overflow: hidden;
-  background-color: transparent;
+  background-color: whitesmoke;
   font-family: "Space Mono", monospace;
   font-size: 24px;
 }
 
 /* Navbar links */
 #navbar button {
-  float: left;
-  display: block;
+  display: inline-block;
   color: black;
   font-weight: bold;
   text-align: center;
-  padding: 14px;
   text-decoration: none;
   border: none;
   cursor: pointer;
   font-family: "Space Mono", monospace;
-  font-size: 26px;
+  font-size: 16px;
+  height: 40px;
+}
+
+#navbar button:hover {
+  color: white;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -53,22 +56,50 @@ body::-webkit-scrollbar {
   font-weight: 900;
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
   padding: 0 15px;
-  margin: 10px;
-  margin-bottom: 2px;
+  margin: 0;
   border: 1.4px solid black;
   box-shadow: 10px 10px 2px 2px rgba(0, 0, 255, 0.2);
 }
 
-.selfie {
-  width: 250px;
-  height: 250px;
-  border-radius: 20px;
+.progress-bar-container {
+  position: absolute;
+  border-radius: 16px;
+  left: 50%;
+  top: 63%;
+  transform: translate(-50%, -50%);
+  width: calc(100vw / 2.8);
+  height: calc(100vh / 2.8);
+  background-color: rgba(0, 0, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.selfie:hover {
-  transform: scale(1.02);
-  transition: 0.8s;
-  box-shadow: 7px 7px 1px 1px rgba(0, 0, 255, 0.2);
+#progress-bar {
+  width: 40%;
+  height: 1.5px;
+  margin-top: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#progress-bar::-webkit-progress-value {
+  background-color: white;
+}
+
+.progress-label {
+  font-family: "Space Mono", monospace;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .role-title {
@@ -91,7 +122,7 @@ body::-webkit-scrollbar {
 
 /* Hover effect for navbar */
 .nav-hover {
-  background: linear-gradient(#e1d9d1 0 0) no-repeat
+  background: linear-gradient(black 0 0) no-repeat
     calc(200% - var(--i, 0) * 100%) 100% / 200%
     calc(100% * var(--i, 0) + 0.01em);
   transition: 0.2s calc(var(--i, 0) * 0.3s),
@@ -104,23 +135,24 @@ body::-webkit-scrollbar {
 .card {
   width: 100%;
   height: 100vh;
-  color: #e1d9d1;
+  color: #ffffff;
   position: sticky;
   bottom: 0;
 }
 
 .card-1 {
-  background-color: #41644a;
+  background-color: #1d1ae5;
   z-index: 4;
   display: flex;
   justify-content: space-between;
 }
 .card-2 {
-  background-color: #263a29;
+  background-color: #e46ba1;
   z-index: 3;
 }
 .card-3 {
-  background-color: #e86a33;
+  background-color: #ffe600;
+  color: #11190c;
   z-index: 2;
 }
 
@@ -136,7 +168,6 @@ span {
   font-size: 18px;
 }
 
-
 .icon-container {
   display: flex;
   flex-direction: row;
@@ -147,6 +178,7 @@ span {
 
 .icon-container > img {
   margin-right: 15px;
+  margin-bottom: 20px;
 }
 
 .image-container {
@@ -181,42 +213,70 @@ span {
 
 /* card-2 PROJECTS */
 
-.project-container {
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
+  z-index: 3;
+  background-color: #e46ba1;
+}
+
+.container {
   display: flex;
-  justify-content: space-evenly;
+  width: 300vw;
 }
 
-.project-boxes {
-  border: 1.5px solid #e1d9d1;
-  width: 275px;
-  height: 250px;
-  border-radius: 5px;
+.projects-header {
+  font-size: 7.5em;
+  line-height: 0.8;
+  padding: 10px 0 0 0;
+  margin: 75px 0 0 15px;
+  height: fit-content;
 }
 
-.project-boxes > a {
-  color: #e1d9d1;
-  margin-left: 10px;
-  text-decoration: none;
+.pin {
+  width: 100vw;
+  padding: 15.5vw 10vw;
 }
 
-.project-boxes > a:hover {
-  text-decoration: underline;
+.col1 {
+  border-radius: 4px;
+  padding: 3px;
 }
 
-.project-boxes:hover {
-  transform: scale(1.05);
-  transition: 0.8s;
+.col {
+  display: flex;
+  gap: 3em;
 }
 
-.project-box-header-text {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  margin: 5px 0 0 10px;
+.col > p {
+  font-size: 0.85rem;
+  margin: 0;
 }
 
-.project-box-text {
-  margin: 15px 0 15px 10px;
-  font-size: 0.8em;
+.project-links {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.project-links > a {
+  color: black;
+}
+.project-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.project-image {
+  height: 140px;
+  width: 250px;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.project-image:hover {
+  box-shadow: 6px 6px #000000;
+  transform: scale(1.02);
 }
 
 /* Card-3 CONTACT */
@@ -239,28 +299,28 @@ span {
   align-items: center;
   justify-content: center;
   height: 450px;
-  width: 400px;
+  width: 350px;
   border-radius: 12px;
   border: 1.5px solid black;
 }
 
 .form-header-text {
   font-family: "Space Mono", monospace;
-  color: #e1d9d1;
+  color: #11190c;
   text-decoration: underline;
 }
 
 textarea {
   resize: none;
   margin: 5px 0 0 0;
-  background-color: #e1d9d1;
+  background-color: whitesmoke;
 }
 
 input {
   margin-bottom: 10px;
-  background-color: #e1d9d1;
   border: none;
   padding: 3px;
+  background-color: whitesmoke;
   font-family: "Space Mono", monospace;
 }
 
@@ -295,7 +355,7 @@ input {
 .other-contacts > a {
   margin-right: 50px;
   font-size: 24px;
-  color: #e1d9d1;
+  color: #11190c;
   text-decoration: none;
 }
 
@@ -304,7 +364,7 @@ input {
 }
 
 .other-contacts > a {
-  background: linear-gradient(#e1d9d1 0 0) no-repeat
+  background: linear-gradient(#ffffff 0 0) no-repeat
     calc(200% - var(--i, 0) * 100%) 100% / 200%
     calc(100% * var(--i, 0) + 0.01em);
   transition: 0.2s calc(var(--i, 0) * 0.2s),
@@ -312,6 +372,19 @@ input {
 }
 .other-contacts > a:hover {
   --i: 1;
+}
+
+@media screen and (max-width: 1250px) {
+  .col1 {
+    margin: 0;
+    padding: 0;
+    display: block;
+    gap: 0.5em;
+  }
+
+  .pin {
+    padding-top: 25vw;
+  }
 }
 
 @media screen and (max-width: 930px) {
@@ -331,6 +404,62 @@ input {
     margin-bottom: 5px;
     width: 100%;
   }
+
+  /* PROJECT SLIDES */
+
+  .container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pin {
+    padding: 0;
+    margin: 0;
+    margin: 20px 0;
+  }
+
+  .projects-header {
+    font-size: 4rem;
+    margin-top: 20px;
+  }
+
+  .project-links {
+    margin-top: 15px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project-links > a {
+    margin-right: 20px;
+  }
+
+  .project-image-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-image {
+    height: 125px;
+    width: 250px;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
+
+  .col1 {
+    margin: 25px 25px 0 25px;
+  }
+
+  .col > p {
+    font-size: 0.95em;
+  }
+
+  .name-banner {
+    box-shadow: 3px 3px 1px 1px rgba(0, 0, 255, 0.2);
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -339,11 +468,11 @@ input {
   }
 
   .start-section {
-    height: 75vh;
+    height: 100vh;
   }
 
   .card {
-    height: 100%; 
+    height: 100%;
     padding-bottom: 25px;
     overflow-x: hidden;
   }
@@ -358,9 +487,8 @@ input {
     font-size: 2.2rem;
   }
 
-  .selfie {
-    width: 200px;
-    height: 200px;
+  .progress-bar-container {
+    top: 52.5%;
   }
 
   .role-title {
@@ -369,26 +497,6 @@ input {
 
   .card-1 {
     display: block;
-  }
-
-  .project-container {
-    display: block;
-  }
-
-  .project-boxes {
-    width: 100%;
-    height: 100%;
-    margin-top: 5px;
-  }
-
-  .project-box-header-text {
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-  }
-
-  .project-box-text {
-    margin: 0;
   }
 
   .contact-container {
@@ -420,7 +528,6 @@ input {
   }
 
   .form-header-text {
-    /* font-size: 20px; */
     margin: 0 0 5px 0;
   }
 

@@ -46,7 +46,12 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+//GSAP animations for navbar coming in from top and picture of myself. 
+
 }
+const tl = gsap.timeline({defaults: {duration: 1.75} });
+tl.fromTo(navbar, {y: "-100%"}, {y: "0%"})
 
 /* using functions with scrollTo to get to a certain position on page. 
 Functions are added to onClick on navbar */
@@ -80,9 +85,42 @@ function projectScroll() {
 
 function contactScroll() {
   const screenHeight = window.innerHeight;
-  const scrollPosition = screenHeight * 3;
+  const scrollPosition = screenHeight * 9;
   window.scrollTo({
     top: scrollPosition,
     left: 0,
-    behavior: "smooth",
+    behavior: "smooth", 
+    /* might remove smooth on contact, 
+    have to go through entire horizontal scroll when I go from contacts back to projects & vice versa */
   });}
+
+
+/* 
+GSAP ANIMATIONS for horizontal scroll on projects page.
+*/
+
+const container = document.querySelector(".container");
+const sections = gsap.utils.toArray(".container section");
+const texts = gsap.utils.toArray('.anim');
+
+let resp = gsap.matchMedia();
+
+resp.add("(min-width: 930px)", () => {
+  gsap.to(sections, {
+  xPercent: -100 * (sections.length - 0.4), 
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".container",
+    pin: true,
+    scrub: 1,
+    end: "+=3000",
+    //snap: 1 / (sections.length - 1),
+    // markers: true,
+  }
+})
+});
+
+// Console log styled message
+
+const style = 'background-color: black; color: whitesmoke; font-style: italic; border: 5px solid hotpink; font-size: 2em;'
+console.log("%cThought I'd find you here. Hi!", style);
