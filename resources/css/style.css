@@ -191,7 +191,7 @@ span {
 .code-image {
   height: 350px;
   width: 350px;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 /* Headers on card stacking */
@@ -249,8 +249,9 @@ span {
 }
 
 .col > p {
-  font-size: 0.85rem;
+  /* font-size: 0.85rem; */
   margin: 0;
+  font-family: "Signika", sans-serif;
 }
 
 .project-links {
@@ -389,19 +390,29 @@ input {
 
 @media screen and (max-width: 930px) {
   .image-container {
-    display: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-container > img {
+    width: 250px;
+    height: 200px;
   }
 
   .text-container > .scroll-header {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+  }
+
+
+  .scroll-text {
+    margin: 0 5px;
   }
 
   .icon-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 30px;
-    margin-bottom: 5px;
+    margin: 30px 0 5px 0;
     width: 100%;
   }
 
@@ -496,7 +507,11 @@ input {
   }
 
   .card-1 {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
   }
 
   .contact-container {
